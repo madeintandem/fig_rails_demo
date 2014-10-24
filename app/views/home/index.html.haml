@@ -1,6 +1,11 @@
+%h1 Postgres info
+%p
+  Connected to postgres on #{@pg_config[:host]}:#{@pg_config[:port]}
+%pre= print_hash @pg_config
+
 %h1 Elasticsearch info
 %p
   Connected to elasticsearch running on #{@es_client.transport.connections.first.connection.host}
 %p
   Cluster status is #{@es_client.cluster.health["status"]}
-%pre= @es_client.cluster.health
+%pre= print_hash @es_client.cluster.health
