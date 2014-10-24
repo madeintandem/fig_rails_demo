@@ -2,3 +2,9 @@ db:
   image: postgres:9.4
   ports:
     - 5432:5432
+
+elasticsearch:
+  build: docker/elasticsearch/
+  ports:
+    - 9200:9200
+    - 9300:9300
