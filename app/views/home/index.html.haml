@@ -1,0 +1,6 @@
+%h1 Elasticsearch info
+%p
+  Connected to elasticsearch running on #{@es_client.transport.connections.first.connection.host}
+%p
+  Cluster status is #{@es_client.cluster.health["status"]}
+%pre= @es_client.cluster.health
