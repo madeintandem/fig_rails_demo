@@ -14,7 +14,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
-
+gem 'redis'
 gem 'haml'
 
 gem 'spring',        group: :development

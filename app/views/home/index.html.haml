@@ -9,3 +9,8 @@
 %p
   Cluster status is #{@es_client.cluster.health["status"]}
 %pre= print_hash @es_client.cluster.health
+
+%h1 Redis info
+%p
+  Your're connected to Redis. Here's your info:
+%pre= print_hash $redis.info
