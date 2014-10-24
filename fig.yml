@@ -8,3 +8,8 @@ elasticsearch:
   ports:
     - 9200:9200
     - 9300:9300
+
+redis:
+  image: redis:2.8.17
+  ports:
+    - 6379:6379
