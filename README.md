@@ -36,7 +36,7 @@ boot2docker up
 boot2docker does some super goofy stuff with networking so we have to figure out what ip it is running on. I think the easiest way is to initialize your shell and have RAILS read it from your `.bash_profile`.
 
 ```
-eval $(boot2docker shellinit &> /dev/null)
+eval $(boot2docker shellinit 2> /dev/null)
 export DOCKER_IP=$(boot2docker ip 2>/dev/null)
 ```
 
