@@ -1,8 +1,10 @@
 #Fig + Docker for rails dev
 
-The goal here is to demonstrate a docker environment for a Rails app for development use. This means we will only be running our dependent services on docker and not the app. A docker file for the application can easily be added and linked into this fig configuration but consensus is that running rails s locally is easier for debugging.
+The goal here is to demonstrate a Docker based development environment. This means we will only be running our dependent services on Docker, not the app. A `Dockerfile` for the application can be easily added and linked into this Fig configuration but consensus is that running `rails s` locally is easier for debugging, testing, and editing.
 
-What we do desire is a way to facilitate working on multiple projects locally which depend on multiple versions of various services. So let's get started.
+When you have multiple projects locally which depend on different versions of multiple services, setting up your machine can be a pain. Returning to an older project can be especially difficult if it depends on old versions of the datastore or search appliance. This project aims to freeze the services configuration leveraging Docker containers and tieing them all together with Fig. 
+
+So let's get started.
 
 ## Prereqs
 
