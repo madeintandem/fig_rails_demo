@@ -2,7 +2,7 @@
 
 The goal here is to demonstrate a Docker based development environment. This means we will only be running our dependent services on Docker, not the app. A `Dockerfile` for the application can be easily added and linked into this Fig configuration but consensus is that running `rails s` locally is easier for debugging, testing, and editing.
 
-When you have multiple projects locally which depend on different versions of multiple services, setting up your machine can be a pain. Returning to an older project can be especially difficult if it depends on old versions of the datastore or search appliance. This project aims to freeze the services configuration leveraging Docker containers and tieing them all together with Fig. 
+When you have multiple projects locally which depend on different versions of multiple services, setting up your machine can be a pain. Returning to an older project can be especially difficult if it depends on old versions of the datastore or search appliance. This project aims to freeze the services configuration leveraging Docker containers and tieing them all together with Fig.
 
 So let's get started.
 
@@ -62,7 +62,7 @@ The first run will be painful thanks to the slowness of American internet, but s
 
 The demo app uses Postgres, Elasticsearch and Redis. Postgres and Redis are direct from the registry image. Elasticsearch is from a `Dockerfile` located in `docker/elasticsearch`. I just copied this directly from the image at the registry but it establishes convention for using your own docker files.
 
-The only things to know about the app's configuration are in the `config/database.yml`, `config/initializers/elasticsearch.rb` and `config/initializers/redis.rb`. You may wish to do something more sophisticated, but this is the bare minimum. 
+The only things to know about the app's configuration are in the `config/database.yml`, `config/initializers/elasticsearch.rb` and `config/initializers/redis.rb`. You may wish to do something more sophisticated, but this is the bare minimum.
 
 Then fire it up!
 
@@ -89,4 +89,25 @@ Who knows? This was so quick and painless I don't think there's much more I need
 
 #License
 
-We don't need no stinkin license. 2014
+Copyright (c) 2014 Joseph Hirn
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
