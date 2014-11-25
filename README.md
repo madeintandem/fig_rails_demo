@@ -18,6 +18,7 @@ We need to install virtualbox, boot2docker and fig. If you don't have [brew cask
 ```
 brew cask install virtualbox
 brew cask install boot2docker
+brew install boot2docker
 pip install -U fig
 ```
 
